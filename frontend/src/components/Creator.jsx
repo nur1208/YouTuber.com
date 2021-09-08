@@ -1,4 +1,5 @@
 import React from "react";
+
 import { CreatorContainer } from "../styledComponents/styledComps";
 
 export const Creator = ({ name, image }) => {
