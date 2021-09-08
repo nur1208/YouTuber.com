@@ -1,7 +1,8 @@
 import express, { json } from "express";
 import helmet from "helmet";
 import cors from "cors";
-var app = express();
+import { scrapeChannel } from "./scraping.js";
+const app = express();
 // YouTuber.com
 // respond with "hello world" when a GET request is made to the homepage
 
@@ -25,6 +26,9 @@ app.get("/creators", async function (req, res) {
 
 app.post("/creators", async function (req, res) {
   console.log(req.body);
+  const data = await scrapeChannel(req.body.url);
+  console.log({ data });
+
   res.send("hello world");
 });
 
