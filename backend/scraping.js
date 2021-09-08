@@ -34,7 +34,7 @@ export const scrapeChannel = async (url) => {
 
   browser.close();
 
-  //   console.log({ name, avatarURL });
+  console.log({ name, avatarURL });
 
   return { name, avatarURL };
 };
